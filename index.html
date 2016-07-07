@@ -1,64 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="fornitureApp">
+<html lang="en" ng-app="furnitureApp">
 <head>
 	<meta charset="UTF-8">
-	<title>Ikea</title>
+	<title>Ortego & Morales Furniture</title>
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
 
 </head>
-<body>
+<body ng-controller="viewController">
 	<ul id="dropdown1" class="dropdown-content">
-		<li><a href="#!">Mesas</a></li>
-		<li><a href="#!">Sillas</a></li>
-		<li><a href="#!">Estanterias</a></li>
+		<li><a href="#table">Tables</a></li>
+		<li><a href="#chair">Chairs</a></li>
+		<li><a href="#self">Selves</a></li>
 	</ul>
 	<nav>
 		<div class="nav-wrapper">
-			<a href="#!" class="brand-logo">Logo</a>
+			<a href="#!" class="brand-logo center">
+				<img src="img/logos/logoGrande.png" height="60px">
+			</a>
 			<ul class="right hide-on-med-and-down">
-			<li><a href="sass.html">Home</a></li>
-				<li><a class="dropdown-button" data-beloworigin="true" href="#!" data-activates="dropdown1">Products<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a href="#/">Home</a></li>
+				<li><a class="dropdown-button" data-beloworigin="true" href="#allProducts" data-activates="dropdown1">Products<i class="material-icons right">arrow_drop_down</i></a></li>
 				<li><a href="badges.html">Contact</a></li>
 			</ul>
 		</div>
 	</nav>
 
-<div class="slider">
-    <ul class="slides">
-      <li>
-        <img src="img/portada/004.jpg"> <!-- random image -->
-      </li>
-      <li>
-        <img src="img/portada/003.jpg"> <!-- random image -->
-      </li>
-      <li>
-        <img src="img/portada/002.jpg"> <!-- random image -->
-      </li>
-      <li>
-        <img src="img/portada/001.jpg"> <!-- random image -->
-      </li>
-    </ul>
-  </div>
+	<div class="container" ng-view>
+		
+	</div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col s4">
-        <img src="img/logos/logo_silla.png" alt="Sillas" width="200px" height="200px">
-      </div>
-      <div class="col s4">
-        <img src="img/logos/logo_mesa.png" alt="Mesas" width="200px" height="200px">
-      </div>
-      <div class="col s4">
-        <img src="img/logos/logo_estanteria.png" alt="Estanterias" width="200px" height="200px">
-      </div>
-
-    </div>
-  </div>
+	<footer class="page-footer">
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="https://www.google.es/maps/place/5+Av%2FEast+77+St,+New+York,+NY+10021,+Estados+Unidos/@40.7757257,-73.9657265,17z/data=!4m5!3m4!1s0x89c2589471769bcf:0xd0511550403952c4!8m2!3d40.775612!4d-73.964836">Ortego y Morales Furniture / 5 Av/East 77 St. / 10021, NY, United States</a>
+            </div>
+          </div>
+        </footer>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/angular-route.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+
 </body>
 </html>
