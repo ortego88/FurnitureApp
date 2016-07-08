@@ -1,7 +1,6 @@
 <div class="row">
 <h2 class="center-align">Chairs</h2>
-	<article class="col s4" ng-repeat="furni in furniture.chair">
-		<div class="card">
+<article class="col s4" ng-repeat="furni in furniture | filter : 'chair'">		<div class="card">
 			<div class="card-image waves-effect waves-block waves-light">
 				<img class="activator" ng-src="{{furni.image}}" width="250px">
 			</div>

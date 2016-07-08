@@ -4,28 +4,33 @@ var app = angular.module('furnitureApp', ['ngRoute']);
 app.config(['$routeProvider',function($routeProvider) {
 	$routeProvider
 		.when('/', {
-			templateUrl: 'views/viewOne.html', 
+			templateUrl: 'views/slides.html', 
 			controller: 'viewController'
 		})
 
 		.when('/table', {
-			templateUrl: 'views/viewTable.html',
-			controller: 'ViewChairController'
+			templateUrl: 'views/table.html',
+			controller: 'ViewNewController'
 		})
 
 		.when('/chair', {
-			templateUrl: 'views/viewChair.html',
-			controller: 'ViewChairController'
+			templateUrl: 'views/chair.html',
+			controller: 'ViewNewController'
 		})
 
 		.when('/self', {
-			templateUrl: 'views/viewSelf.html',
-			controller: 'ViewChairController'
+			templateUrl: 'views/self.html',
+			controller: 'ViewNewController'
 		})
 
 		.when('/allProducts', {
-			templateUrl: 'views/viewAllProducts.html',
-			controller: 'ViewChairController'
+			templateUrl: 'views/allProducts.html',
+			controller: 'ViewNewController'
+		})
+
+		.when('/contact', {
+			templateUrl: 'views/contact.html',
+			controller: 'ViewNewController'
 		})
 
 		.otherwise({
@@ -39,27 +44,11 @@ angular.element(document).ready(function(){
 });
 }]);
 
-app.controller("ViewChairController", ["$scope","$http", function($scope, $http){
+app.controller("ViewNewController", ["$scope","$http", function($scope, $http){
 	$http.get("js/furnitureJson.json").success(function(data){
 		$scope.furniture = data;
 	})
 }])
 
-/*app.controller('ViewChairController', ['$scope', function($scope){
-	$scope.appTitle = 'Simple Expenses Tracker';
-}]);*/
-
-/*
-
-app.controller('NewEditExpenseViewController', ['$scope','$routeParams','$location','Expenses', function ($scope, $routeParams, $location, Expenses){
-	$scope.someText = 'The world is mine! The ID is ' + $routeParams.id;
-	if(!$routeParams.id) {
-		$scope.expense = {date: new Date()}
-	}
-
-	$scope.save = function() {
-		Expenses.save($scope.expense);
-		$location.path('/');
-	}
-}]);*/
-
+app.controller("search", ["$scope", function($scope) {
+    $scope.furniture}]);
